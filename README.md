@@ -7,3 +7,5 @@
 > [!NOTE]
 > Foi desenvolvido apenas o visual do formulário.
 
+> [!IMPORTANT]
+> O arquivo de reset, utilizado para normalizar o estilo padrão dos elementos, é de uso público e foi obtido [nesse endereço](https://meyerweb.com/eric/tools/css/reset/).
