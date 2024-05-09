@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CV Online - Patrícia Santos</title> <!-- título da página -->
+        <link rel="stylesheet" href="./styles.css"> <!-- importa o arquivo de estilo -->
+    </head>
+    <body class="body">
+        <header class="header">
+            <div class="menu_container"> <!-- container para o menu de navegação -->
+                <nav class="menu">
+                    <ul class="menu_links"> <!-- links do menu de navegação referenciando pelo id da seção -->
+                        <li><a class="link" href="#sobre">Sobre</a></li>
+                        <li><a class="link" href="#formacao">Formação</a></li>
+                        <li><a class="link" href="#portfolio">Portfólio</a></li>
+                        <li><a class="link" href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header_text"> <!-- título e subtítulo do header -->
+                <h1 class="header_title">Patrícia Santos</h1>
+                <p class="text">Estudante de Análise e Desenvolvimento de Sistemas no Centro Universitário Internacional UNINTER.</p>
+            </div>
+        </header>
+        <main>
+            <section class="section" id="sobre"> <!-- início da seção sobre -->
+                <h2 class="section_title">Sobre</h2>
+                <div class="section_content">
+                    <img class="section_image" src="./images/mochi-woman-reading-a-book-or-novel.svg"/>
+                    <p class="text">Olá! Eu sou a Patrícia, técnica em informática e atualmente cursando o 3º semestre da graduação em Análise e Desenvolvimento de Sistemas (UNINTER). Profissionalmente, meus interesses estão relacionados a redes de computadores, cibersegurança e programação. Já no meu tempo livre, gosto de ler, jogar e aproveitar a natureza.</p>
+                </div>
+            </section>
+            <section class="section" id="formacao"> <!-- início da seção formação, que utiliza divs para organizar o conteúdo -->
+                <h2 class="section_title">Formação</h2>
+                <div class="timeline_container">
+                    <div class="timeline_left">
+                        <p class="timeline_title">UNINTER</p>
+                        <p class="timeline_date">2023 - 2025</p>
+                    </div>
+                    <div class="timeline_right">
+                        <p class="timeline_title">Análise e Desenvolvimento de Sistemas</p>
+                        <p class="timeline_description">Curso tecnólogo de nível superior em andamento. Conteúdos relacionados a banco de dados, programação e análise de sistemas, entre outras disciplinas.</p>
+                    </div>
+                </div>
+                <div class="timeline_container">
+                    <div class="timeline_left">
+                        <p class="timeline_title">ETEC Diadema</p>
+                        <p class="timeline_date">2009-2010</p>
+                    </div>
+                    <div class="timeline_right">
+                        <p class="timeline_title">Técnica em Informática</p>
+                        <p class="timeline_description">Curso técnico em informática com ênfase em desenvolvimento, abordando lógica de proramação e linguagens como Java, C# e Pascal, entre outras.</p>
+                    </div>
+                </div>
+                <div class="timeline_container">
+                    <div class="timeline_left">
+                        <p class="timeline_title">Bit Company</p>
+                        <p class="timeline_date">2010</p>
+                    </div>
+                    <div class="timeline_right">
+                        <p class="timeline_title">Inglês</p>
+                        <p class="timeline_description">Curso de inglês em nível intermediário.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section" id="portfolio"> <!-- início da seção portfólio -->
+                <h2 class="section_title">Portfólio</h2>
+                <div class="cards"> <!-- container para organizar o portfólio, contendo imagem e textos -->
+                    <div class="card">
+                        <a href="https://pg-santos.github.io/web_project_1_ptbr"><img class="card_image" src="images/portfolio1.png" alt="" /></a>
+                        <div class="card_details">
+                            <p class="card_title">Aprendendo a aprender</p>
+                            <p class="card_description">O projeto consiste em uma página única que apresenta ao usuário diversas informações sobre as técnicas de aprendizado. O site, elaborado utilizando HTML e CSS, também foi desenvolvido de acordo com a metodologia BEM.</p>
+                            <a class="card_link" href="https://pg-santos.github.io/web_project_1_ptbr">Ver mais</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <a href="https://pg-santos.github.io/web_project_3_ptbr"><img class="card_image" src="images/portfolio2.png" alt="" /></a>
+                        <div class="card_details">
+                            <p class="card_title">De Pátria para Pátria</p>
+                            <p class="card_description">O projeto mostra as cidades de origem de alguns funcionários do Practicum. O website foi desenvolvido utilizando HTML e CSS, além da metodologia BEM. As consultas de mídia foram utilizadas para tornar o site responsivo.</p>
+                            <a class="card_link" href="https://pg-santos.github.io/web_project_3_ptbr">Ver mais</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section" id="contato"> <!-- início da seção contato -->
+                <h2 class="section_title">Contato</h2>
+                <div class="contact_container">
+                    <form class="form"> <!-- criação do formulário de contato, indicando o input de cada campo -->
+                        <div class="form_inputs name">
+                            <label class="form_label" for="name">Nome</label>
+                            <input class="form_input" type="text" id="name" name="name" placeholder="Seu nome aqui">
+                        </div>
+                        <div class="form_inputs email">
+                            <label class="form_label" for="email">Email</label>
+                            <input class="form_input" type="text" id="email" name="email" placeholder="Seu email aqui">
+                        </div>
+                        <div class="form_inputs message">
+                            <label class="form_label" for="message">Mensagem</label>
+                            <textarea class="form_msginput" id="message" name="message" placeholder="Digite aqui sua mensagem"></textarea>
+                        </div>
+                        <input class="form_button" type="button" onclick="alert('Mensagem enviada!')" value="Enviar"> <!-- botão com código em javascript para exibir um alerta ao clicar no botão -->
+                    </form>
+                    <img class="contact_image" src="images/mochi-young-woman-working-on-a-computer.svg" />
+                </div>
+            </section>
+        </main>
+        <footer class="footer"> <!-- footer -->
+            <p class="footer_copyright">Patrícia Santos &copy 2024</p>
+        </footer>
+    </body>
+</html>

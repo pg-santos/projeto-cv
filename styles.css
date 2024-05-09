@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap'); /* importa a fonte utilizada */
+@import url(reset.css); /* importa arquivo para resetar quaqluer configuração de estilo padrão */
+
+/*aplica um estilo padrão para todos os elementos*/
+* {
+    box-sizing: border-box;
+    font-family: "IBM Plex Mono", monospace;
+    background-color: #fff2e5;
+    scroll-behavior: smooth;
+}
+
+.body {
+    margin: auto;
+    width: 85%;
+}
+
+/* início do estilo do header e seus elementos */
+.header{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(./images/15592626_5613297.svg) no-repeat;
+    background-size: cover;
+}
+.menu_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.menu{
+    height: 80px;
+    width: 85%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px #768292 solid;
+}
+
+.menu_links{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    list-style: none;   
+}
+
+.link {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    transition: color 0.2s ease;
+}
+
+.link:hover {
+    color: #768292;
+}
+
+.header_text {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 80px 80px;
+    width: 50%;
+    border-radius: 20px;
+    box-shadow: 0px 10px 15px -3px rgba(255,255,255,0.5);
+}
+
+.header_title {
+    color: #768292;
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* início do estilo das seções */
+
+.section_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.section_image {
+    width: 200px;
+}
+.text {
+    color: black;
+    width: 80%;
+    text-align: justify;
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0 0;
+}
+
+.section_title {
+    width: 100%;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px #768292 solid;
+}
+
+/* início do estilo da seção formação */
+
+.timeline_container {
+    display: flex;
+    width: 100%;
+}
+.timeline_left {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    text-align: right;
+    margin-right: 20px;
+    padding: 20px 40px 40px;
+    border-right: 1px #768292 solid;
+}
+.timeline_right {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    padding: 20px 20px 40px;
+}
+.timeline_title {
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.timeline_date {
+    color: #666666;
+}
+
+/* início do estilo da seção portfólio */
+
+.cards {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.card_image {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #768292;
+    transition: opacity .25s ease;
+}
+
+.card_image:hover {
+    opacity: .8;
+}
+
+.card_details {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.card_title {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.card_description {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.card_link {
+    font-size: 14px;
+    text-decoration: none;
+    color: #768292;
+    transition: opacity .25s ease;
+}
+
+.card_link:hover {
+    opacity: .5;
+}
+
+/* início do estilo da seção contato */
+
+.contact_container {
+    width: 85%;
+    display: flex;
+    margin: 40px auto;
+}
+
+.form {
+    display: grid;
+    grid-template-areas:
+    "name email"
+    "message message"
+    "button .";
+    width: 65%;
+    margin: 0;
+    grid-gap: 15px 40px;
+}
+
+.name { grid-area: name; }
+.email { grid-area: email; }
+.message { grid-area: message; }
+
+.form_inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_label {
+    margin-bottom: 10px;
+}
+
+.form_input {
+    padding: 10px 20px;
+    border: 1px #768292 solid;
+    background: #ffffff;
+    font-size: 14px;
+}
+
+.form_msginput {
+    height: 100px;
+    padding: 10px 20px;
+    resize: none;
+    border: 1px #768292 solid;
+    background: #ffffff;
+    font-size: 14px;
+}
+
+.form_input:focus-visible, .form_input:focus, .form_msginput:focus-visible, .form_msginput:focus {
+    border: 1px rgba(118, 130, 146, 0.5) solid;
+    outline: none;
+}
+
+.form_button {
+    grid-area: button;
+    color: #ffffff;
+    border: none;
+    background-color: #768292;
+    width: 30%;
+    padding: 10px 20px;
+    transition: all .25s ease;
+    cursor: pointer;
+}
+
+.form_button:hover {
+    opacity: .75;
+}
+
+.contact_image {
+    width: 225px;
+    margin: auto;
+    transition: all .25s ease;
+}
+
+.contact_image:hover {
+    opacity: .75;
+}
+
+/* início do estilo do footer */
+
+.footer {
+    margin-top: 100px;
+    width: 100%;
+    height: 40px;
+    border-top: 1px #768292 solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer_copyright {
+    font-size: 14px;
+    background: transparent;
+}
